@@ -1,0 +1,17 @@
+{
+  "id": "04-adobe-subscription",
+  "name": "Adobe Creative Cloud Abonelik Şartları",
+  "url": "https://www.adobe.com/legal/subscription-terms.html",
+  "document_type": "Subscription Terms (Abonelik Şartları)",
+  "text": "Adobe Subscription Terms. Your subscription will automatically renew at the end of each billing cycle unless cancelled, and a cancellation fee equal to 50% of the remaining contract obligation may apply upon early termination. We may share with certain trusted affiliates as long as necessary without specifying explicit retention periods.",
+  "ground_truth_risks": [
+    {
+      "category": "AUTO_RENEWAL_TRAP",
+      "risk_weight": "HIGH",
+      "expected_quote": "Your subscription will automatically renew at the end of each billing cycle unless cancelled, and a cancellation fee equal to 50% of the remaining contract obligation may apply upon early termination.",
+      "description": "Otomatik yenileme tuzağı ve %50 erken fesih cezası dayatması"
+    }
+  ],
+  "expected_ambiguity": true,
+  "expected_prompt_injection": false
+}

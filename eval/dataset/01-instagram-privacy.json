@@ -1,0 +1,23 @@
+{
+  "id": "01-instagram-privacy",
+  "name": "Instagram & Meta Gizlilik ve Veri Politikası",
+  "url": "https://privacycenter.instagram.com/policy",
+  "document_type": "Privacy Policy (Gizlilik Politikası)",
+  "text": "Instagram and Meta Privacy Policy. We collect information about your activity, connections, and device. We share information we collect with third-party partners, including advertisers and analytics providers, to deliver targeted advertising across networks. We may modify these terms at any time without prior individual notice to users. Your continued use constitutes acceptance of revised terms.",
+  "ground_truth_risks": [
+    {
+      "category": "DATA_SELLING_SHARING",
+      "risk_weight": "CRITICAL",
+      "expected_quote": "We share information we collect with third-party partners, including advertisers and analytics providers, to deliver targeted advertising across networks.",
+      "description": "Kişisel verilerin ve kullanım alışkanlıklarının 3. taraf reklamverenlerle paylaşılması (KVKK Madde 8-9)"
+    },
+    {
+      "category": "UNILATERAL_CHANGE",
+      "risk_weight": "HIGH",
+      "expected_quote": "We may modify these terms at any time without prior individual notice to users.",
+      "description": "Kullanıcıya haber vermeksizin tek taraflı sözleşme değişikliği yetkisi"
+    }
+  ],
+  "expected_ambiguity": false,
+  "expected_prompt_injection": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "02-zoom-ai-terms",
+  "name": "Zoom Video Communications Kullanım Şartları (AI Eğitimi Maddesi)",
+  "url": "https://explore.zoom.us/en/terms/",
+  "document_type": "Terms of Service (Kullanım Koşulları)",
+  "text": "Zoom Terms of Service Section 10. Customer consents to Zoom access, use, collection, creation, modification, distribution, processing, sharing, maintenance, and storage of customer content for the purpose of artificial intelligence and machine learning model training and development. We disclaim all liability for any direct or indirect data loss or service downtime under all circumstances.",
+  "ground_truth_risks": [
+    {
+      "category": "CONTENT_OWNERSHIP",
+      "risk_weight": "CRITICAL",
+      "expected_quote": "Customer consents to Zoom access, use, collection, creation, modification, distribution, processing, sharing, maintenance, and storage of customer content for the purpose of artificial intelligence and machine learning model training and development.",
+      "description": "Kullanıcının video, ses ve toplantı içeriklerinin yapay zeka eğitiminde kullanılması (KVKK Madde 4)"
+    }
+  ],
+  "expected_ambiguity": false,
+  "expected_prompt_injection": false
+}

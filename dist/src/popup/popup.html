@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEV x Alibaba Page-Agent ToS Sentinel</title>
+  <script type="module" crossorigin src="/assets/popup-GM7v8MJt.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="stylesheet" crossorigin href="/assets/popup-Bduc7sa_.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon">⚡</span>
+        <div>
+          <h1 class="brand-title">JEV Sentinel</h1>
+          <span class="brand-sub">Alibaba Page-Agent Motorlu</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="btn-options" class="icon-btn" title="Ayarlar ve KVKK Kuralları">⚙️</button>
+      </div>
+    </header>
+
+    <!-- Mandatory Legal Disclaimer -->
+    <div class="legal-disclaimer">
+      <span class="disclaimer-icon">⚠️</span>
+      <span class="disclaimer-text">Bu uygulama hukuki tavsiye vermez. Yalnızca yapay zeka destekli algoritmik risk farkındalık aracıdır.</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- Loading State -->
+      <div id="loading-state" class="state-container hidden">
+        <div class="spinner"></div>
+        <p class="state-text">Alibaba Page-Agent sayfayı inceliyor, JEV refleksleri hesaplanıyor...</p>
+      </div>
+
+      <!-- Empty / Not Analyzed State -->
+      <div id="empty-state" class="state-container">
+        <div class="empty-icon">🛡️</div>
+        <h3>Henüz Analiz Yapılmadı</h3>
+        <p>Açık olan sözleşme, gizlilik politikası veya abonelik şartlarını taramak için aşağıdaki butona basın.</p>
+        <button id="btn-scan-now" class="btn btn-primary">Sayfayı Şimdi Tara</button>
+      </div>
+
+      <!-- Report State -->
+      <div id="report-state" class="hidden">
+        <!-- Score & Document Header -->
+        <div class="score-card">
+          <div class="score-circle" id="score-circle">
+            <span id="score-number" class="score-value">--</span>
+            <span class="score-max">/100</span>
+          </div>
+          <div class="score-details">
+            <div id="risk-level-badge" class="badge badge-risk">--</div>
+            <div id="doc-type-text" class="doc-type">Kullanım Koşulları</div>
+            <div id="rejected-claims-badge" class="rejected-claims-badge hidden">
+              Alıntısız 0 iddia iptal edildi
+            </div>
+          </div>
+        </div>
+
+        <!-- Jev Reflex Alert Box -->
+        <div id="jev-reflex-box" class="reflex-box">
+          <div class="reflex-header">
+            <span class="reflex-icon">⚡</span>
+            <span id="reflex-headline" class="reflex-headline">JEV REFLEKS</span>
+          </div>
+          <div id="reflex-oneliner" class="reflex-oneliner">--</div>
+          <div class="reflex-advice-row">
+            <span class="advice-label">Doğrudan Tavsiye:</span>
+            <span id="reflex-advice" class="advice-content">--</span>
+          </div>
+        </div>
+
+        <!-- Security / Prompt Injection Banner -->
+        <div id="security-alert-box" class="alert-box alert-danger hidden">
+          <div class="alert-header">🚨 PROMPT INJECTION ENGELLENDİ</div>
+          <p id="security-alert-msg" class="alert-body">Sayfa metninde yapay zekayı aldatmaya yönelik gizli talimat tespit edildi ve etkisiz hale getirildi.</p>
+        </div>
+
+        <!-- Ambiguity / Honesty Banner -->
+        <div id="ambiguity-alert-box" class="alert-box alert-warning hidden">
+          <div class="alert-header">🧐 DÜRÜST BELİRSİZLİK ANALİZİ</div>
+          <p id="ambiguity-alert-msg" class="alert-body">--</p>
+          <ul id="ambiguity-missing-list" class="missing-list"></ul>
+        </div>
+
+        <!-- Risky Clauses List -->
+        <section class="clauses-section">
+          <div class="section-header">
+            <h3>Doğrulanmış Riskli Maddeler (<span id="clauses-count">0</span>)</h3>
+            <span class="verified-label">✓ Birebir Alıntı Doğrulandı</span>
+          </div>
+          <div id="clauses-list" class="clauses-list">
+            <!-- Clauses injected here -->
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <div class="footer-actions">
+          <button id="btn-rescan" class="btn btn-secondary">Yeniden Tara</button>
+          <button id="btn-open-mcp" class="btn btn-outline">MCP Bağlamı</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

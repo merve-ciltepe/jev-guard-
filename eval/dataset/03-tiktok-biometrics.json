@@ -1,0 +1,23 @@
+{
+  "id": "03-tiktok-biometrics",
+  "name": "TikTok Gizlilik Politikası (Biyometrik Veri Toplama)",
+  "url": "https://www.tiktok.com/legal/page/row/privacy-policy/en",
+  "document_type": "Privacy Policy (Gizlilik Politikası)",
+  "text": "TikTok Privacy Policy. We may collect biometric identifiers and biometric information as defined under applicable laws, including faceprints and voiceprints, from your User Content. We share your information with third-party business partners, advertising networks, and cross-border affiliated entities. We store this information in servers located outside your jurisdiction.",
+  "ground_truth_risks": [
+    {
+      "category": "BIOMETRIC_SURVEILLANCE",
+      "risk_weight": "CRITICAL",
+      "expected_quote": "We may collect biometric identifiers and biometric information as defined under applicable laws, including faceprints and voiceprints, from your User Content.",
+      "description": "Özel nitelikli kişisel veri: Yüz ve ses izi gibi biyometrik verilerin toplanması (KVKK Madde 6)"
+    },
+    {
+      "category": "DATA_SELLING_SHARING",
+      "risk_weight": "CRITICAL",
+      "expected_quote": "We share your information with third-party business partners, advertising networks, and cross-border affiliated entities.",
+      "description": "3. taraflarla veri paylaşımı ve sınır ötesi veri aktarımı (KVKK Madde 9)"
+    }
+  ],
+  "expected_ambiguity": false,
+  "expected_prompt_injection": false
+}

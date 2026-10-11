@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEV Sentinel - Ayarlar & Kurallar</title>
+  <script type="module" crossorigin src="/assets/options-DVou6IPF.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/llm-client-DMest4S-.js">
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="stylesheet" crossorigin href="/assets/options-mdIrP1PE.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon">⚡</span>
+        <div>
+          <h1>JEV x Alibaba Page-Agent Sentinel</h1>
+          <p class="subtitle">Kişisel Savunma Kuralları, KVKK Matrisi ve LLM Yapılandırması</p>
+        </div>
+      </div>
+      <div class="legal-badge">⚠️ Hukuki tavsiye vermez</div>
+    </header>
+
+    <div class="grid">
+      <!-- LLM Configuration Card -->
+      <section class="card">
+        <h2>🤖 Kendi LLM Anahtarınız (BYO Key)</h2>
+        <p class="card-desc">page-agent'in demo LLM'i yerine kendi API anahtarınızı tanımlayın.</p>
+
+        <div class="form-group">
+          <label for="llm-provider">Sağlayıcı</label>
+          <select id="llm-provider" class="form-control">
+            <option value="mock">Yerel Deterministik Motor (API Keysiz Demo / Hızlı Eval)</option>
+            <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
+            <option value="gemini">Google Gemini (OpenAI Uyumlu Endpoint)</option>
+            <option value="qwen">Alibaba Qwen / DashScope</option>
+            <option value="ollama">Yerel Ollama (http://localhost:11434)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="llm-api-key">API Anahtarı (API Key)</label>
+          <input type="password" id="llm-api-key" class="form-control" placeholder="sk-..." />
+        </div>
+
+        <div class="form-group">
+          <label for="llm-base-url">Base URL</label>
+          <input type="text" id="llm-base-url" class="form-control" value="https://api.openai.com/v1" />
+        </div>
+
+        <div class="form-group">
+          <label for="llm-model">Model Adı</label>
+          <input type="text" id="llm-model" class="form-control" value="gpt-4o-mini" />
+        </div>
+      </section>
+
+      <!-- User Rules & Jev Reflex Preferences -->
+      <section class="card">
+        <h2>🛡️ Kişisel JEV Savunma Kuralları</h2>
+        <p class="card-desc">Sözleşmelerde sizin adınıza taviz verilmeyecek kırmızı çizgiler.</p>
+
+        <div class="rules-list" id="user-rules-container">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+    </div>
+
+    <!-- KVKK Compliance Matrix Card -->
+    <section class="card mt-4">
+      <h2>⚖️ KVKK 6698 Sayılı Kanun Uyum Matrisi (MCP Kaynağı)</h2>
+      <p class="card-desc">Model Context Protocol (MCP) üzerinden sisteme bağlanan referans kanun maddeleri.</p>
+
+      <div class="kvkk-grid" id="kvkk-container">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+
+    <!-- Save Bar -->
+    <div class="save-bar">
+      <span id="save-status" class="save-status"></span>
+      <button id="btn-save" class="btn btn-primary">Ayarları Kaydet</button>
+    </div>
+  </div>
+</body>
+</html>
