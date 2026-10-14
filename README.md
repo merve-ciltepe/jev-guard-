@@ -148,7 +148,9 @@ npm run eval
 
 ## 🎬 Cypress Demo Videosu & Test Senaryoları (30 Puan)
 
-Test paketi Cypress standardında hazırlanmış, ayrıca yerel Chromium motoru üzerinden **≤ 90 saniyelik** tam akış video ve ekran görüntüsü seti üretilmiştir:
+Test paketi Cypress standardında hazırlanmış, ayrıca yerel Chromium motoru üzerinden **≤ 90 saniyelik** tam akış video ve animasyonlu demo seti üretilmiştir:
+
+![JEV Sentinel Canlı Demo Akışı](cypress/videos/demo-walkthrough.gif)
 
 ### Videodaki İki Ana Sahne:
 1. **Mutlu Yol (Happy Path):**
